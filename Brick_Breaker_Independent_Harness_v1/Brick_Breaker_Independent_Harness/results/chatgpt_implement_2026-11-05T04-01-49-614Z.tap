@@ -1,0 +1,181 @@
+# Implementation: C:\Repos\brick_breaker_swen_6936\brick_break_chatgpt\gameLogic.js
+# Label: chatgpt_implement
+# Executed: 2026-11-05T04:01:49.728Z
+TAP version 13
+# Subtest: BRICK-T01 fresh complete initial states and required exports
+ok 1 - BRICK-T01 fresh complete initial states and required exports
+  ---
+  duration_ms: 1.6672
+  type: 'test'
+  ...
+# Subtest: BRICK-T02 brick identifiers, geometry, and row-major ordering
+ok 2 - BRICK-T02 brick identifiers, geometry, and row-major ordering
+  ---
+  duration_ms: 0.2627
+  type: 'test'
+  ...
+# Subtest: BRICK-T03 right movement 400 px/s
+ok 3 - BRICK-T03 right movement 400 px/s
+  ---
+  duration_ms: 1.1237
+  type: 'test'
+  ...
+# Subtest: BRICK-T04 left movement 400 px/s
+ok 4 - BRICK-T04 left movement 400 px/s
+  ---
+  duration_ms: 0.2542
+  type: 'test'
+  ...
+# Subtest: BRICK-T05 paddle clamps to both boundaries
+ok 5 - BRICK-T05 paddle clamps to both boundaries
+  ---
+  duration_ms: 0.3819
+  type: 'test'
+  ...
+# Subtest: BRICK-T06 unobstructed ball displacement
+ok 6 - BRICK-T06 unobstructed ball displacement
+  ---
+  duration_ms: 0.2674
+  type: 'test'
+  ...
+# Subtest: BRICK-T07 left wall overshoot and remaining-time reflection
+ok 7 - BRICK-T07 left wall overshoot and remaining-time reflection
+  ---
+  duration_ms: 0.3442
+  type: 'test'
+  ...
+# Subtest: BRICK-T08 right wall overshoot and remaining-time reflection
+ok 8 - BRICK-T08 right wall overshoot and remaining-time reflection
+  ---
+  duration_ms: 0.2041
+  type: 'test'
+  ...
+# Subtest: BRICK-T09 top wall overshoot and remaining-time reflection
+ok 9 - BRICK-T09 top wall overshoot and remaining-time reflection
+  ---
+  duration_ms: 0.2533
+  type: 'test'
+  ...
+# Subtest: BRICK-T10 descending paddle contact preserves vx and reverses vy
+ok 10 - BRICK-T10 descending paddle contact preserves vx and reverses vy
+  ---
+  duration_ms: 0.2813
+  type: 'test'
+  ...
+# Subtest: BRICK-T11 separating paddle contact does not retrigger
+ok 11 - BRICK-T11 separating paddle contact does not retrigger
+  ---
+  duration_ms: 0.2283
+  type: 'test'
+  ...
+# Subtest: BRICK-T12 active brick contact deactivates once and adds 10
+ok 12 - BRICK-T12 active brick contact deactivates once and adds 10
+  ---
+  duration_ms: 0.25
+  type: 'test'
+  ...
+# Subtest: BRICK-T13 inactive brick does not collide or award points
+ok 13 - BRICK-T13 inactive brick does not collide or award points
+  ---
+  duration_ms: 0.1908
+  type: 'test'
+  ...
+# Subtest: BRICK-T14 high-speed swept collision prevents tunneling
+ok 14 - BRICK-T14 high-speed swept collision prevents tunneling
+  ---
+  duration_ms: 0.2213
+  type: 'test'
+  ...
+# Subtest: BRICK-T15 bottom exit subtracts one life and resets only ball
+ok 15 - BRICK-T15 bottom exit subtracts one life and resets only ball
+  ---
+  duration_ms: 0.2678
+  type: 'test'
+  ...
+# Subtest: BRICK-T16 third life loss freezes at exit position and marks lost
+ok 16 - BRICK-T16 third life loss freezes at exit position and marks lost
+  ---
+  duration_ms: 0.1819
+  type: 'test'
+  ...
+# Subtest: BRICK-T17 final active brick wins immediately, score 240
+ok 17 - BRICK-T17 final active brick wins immediately, score 240
+  ---
+  duration_ms: 0.4158
+  type: 'test'
+  ...
+# Subtest: BRICK-T18 pause toggle stops entire update
+ok 18 - BRICK-T18 pause toggle stops entire update
+  ---
+  duration_ms: 0.1558
+  type: 'test'
+  ...
+# Subtest: BRICK-T19 resume toggle stops entire update
+ok 19 - BRICK-T19 resume toggle stops entire update
+  ---
+  duration_ms: 0.1625
+  type: 'test'
+  ...
+# Subtest: BRICK-T20 paused and terminal states freeze; terminal toggle ignored
+ok 20 - BRICK-T20 paused and terminal states freeze; terminal toggle ignored
+  ---
+  duration_ms: 0.4459
+  type: 'test'
+  ...
+# Subtest: BRICK-T21 resetGame restores initial values with independent object graphs
+ok 21 - BRICK-T21 resetGame restores initial values with independent object graphs
+  ---
+  duration_ms: 0.1975
+  type: 'test'
+  ...
+# Subtest: BRICK-T22 same state and input sequence is deterministic
+ok 22 - BRICK-T22 same state and input sequence is deterministic
+  ---
+  duration_ms: 1.8181
+  type: 'test'
+  ...
+# Subtest: BRICK-T23 frozen input graph is not mutated and result is fresh
+ok 23 - BRICK-T23 frozen input graph is not mutated and result is fresh
+  ---
+  duration_ms: 0.2809
+  type: 'test'
+  ...
+# Subtest: BRICK-T24 dt rejects invalid values and accepts inclusive endpoints
+ok 24 - BRICK-T24 dt rejects invalid values and accepts inclusive endpoints
+  ---
+  duration_ms: 0.5878
+  type: 'test'
+  ...
+# Subtest: BRICK-T25 simultaneous left and right cancel
+ok 25 - BRICK-T25 simultaneous left and right cancel
+  ---
+  duration_ms: 0.3484
+  type: 'test'
+  ...
+# Subtest: BRICK-T26 dt=0 freezes gameplay even at contact; toggle may change status
+ok 26 - BRICK-T26 dt=0 freezes gameplay even at contact; toggle may change status
+  ---
+  duration_ms: 0.3981
+  type: 'test'
+  ...
+# Subtest: BRICK-T27 exact bottom threshold is strict; beyond exits immediately
+ok 27 - BRICK-T27 exact bottom threshold is strict; beyond exits immediately
+  ---
+  duration_ms: 0.4643
+  type: 'test'
+  ...
+# Subtest: BRICK-T28 simultaneous wall axes and adjacent-brick corner impacts
+ok 28 - BRICK-T28 simultaneous wall axes and adjacent-brick corner impacts
+  ---
+  duration_ms: 0.5655
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 73.2063

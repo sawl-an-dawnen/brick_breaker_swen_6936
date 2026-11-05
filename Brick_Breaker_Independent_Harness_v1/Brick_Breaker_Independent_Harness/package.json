@@ -1,0 +1,12 @@
+{
+  "name": "brick-breaker-independent-harness",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node runner.mjs --impl ./validation-only/reference --label reference",
+    "validate": "node validation-only/validate.mjs",
+    "test:broken": "node runner.mjs --impl ./validation-only/broken --label broken"
+  }
+}

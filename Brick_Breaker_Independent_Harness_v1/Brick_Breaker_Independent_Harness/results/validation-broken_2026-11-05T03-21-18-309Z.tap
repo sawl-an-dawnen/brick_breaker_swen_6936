@@ -1,0 +1,9586 @@
+# Implementation: /mnt/data/Brick_Breaker_Independent_Harness/validation-only/broken/gameLogic.js
+# Label: validation-broken
+# Executed: 2026-11-05T03:21:18.511Z
+TAP version 13
+# Subtest: BRICK-T01 fresh complete initial states and required exports
+ok 1 - BRICK-T01 fresh complete initial states and required exports
+  ---
+  duration_ms: 3.676059
+  type: 'test'
+  ...
+# Subtest: BRICK-T02 brick identifiers, geometry, and row-major ordering
+ok 2 - BRICK-T02 brick identifiers, geometry, and row-major ordering
+  ---
+  duration_ms: 1.045328
+  type: 'test'
+  ...
+# Subtest: BRICK-T03 right movement 400 px/s
+not ok 3 - BRICK-T03 right movement 400 px/s
+  ---
+  duration_ms: 5.818392
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:98:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 360,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 360
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:99:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T04 left movement 400 px/s
+not ok 4 - BRICK-T04 left movement 400 px/s
+  ---
+  duration_ms: 1.715427
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:102:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 340,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 340
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:103:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T05 paddle clamps to both boundaries
+not ok 5 - BRICK-T05 paddle clamps to both boundaries
+  ---
+  duration_ms: 1.268593
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:106:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 705,
+    -     x: 695,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 695
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 705
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:107:52)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T06 unobstructed ball displacement
+not ok 6 - BRICK-T06 unobstructed ball displacement
+  ---
+  duration_ms: 2.508662
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:110:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 280
+    -     x: 400,
+    -     y: 300
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 300
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 280
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:111:57)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T07 left wall overshoot and remaining-time reflection
+not ok 7 - BRICK-T07 left wall overshoot and remaining-time reflection
+  ---
+  duration_ms: 1.719255
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:114:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: -160,
+          vy: -200,
+    +     x: 2,
+    +     y: 290
+    -     x: 10,
+    -     y: 300
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 10
+      y: 300
+      radius: 8
+      vx: -160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 2
+      y: 290
+      radius: 8
+      vx: -160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:115:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T08 right wall overshoot and remaining-time reflection
+not ok 8 - BRICK-T08 right wall overshoot and remaining-time reflection
+  ---
+  duration_ms: 1.484993
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:118:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 798,
+    +     y: 290
+    -     x: 790,
+    -     y: 300
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 790
+      y: 300
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 798
+      y: 290
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:119:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T09 top wall overshoot and remaining-time reflection
+not ok 9 - BRICK-T09 top wall overshoot and remaining-time reflection
+  ---
+  duration_ms: 2.334967
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:122:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 408,
+    +     y: 0
+    -     x: 400,
+    -     y: 10
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 10
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 408
+      y: 0
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:123:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T10 descending paddle contact preserves vx and reverses vy
+not ok 10 - BRICK-T10 descending paddle contact preserves vx and reverses vy
+  ---
+  duration_ms: 3.08864
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:126:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: 200,
+    +     x: 416,
+    +     y: 460
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 460
+      radius: 8
+      vx: 160
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:127:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T11 separating paddle contact does not retrigger
+not ok 11 - BRICK-T11 separating paddle contact does not retrigger
+  ---
+  duration_ms: 1.427139
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:131:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 408,
+    +     y: 442
+    -     x: 400,
+    -     y: 452
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 452
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 408
+      y: 442
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:132:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T12 active brick contact deactivates once and adds 10
+not ok 12 - BRICK-T12 active brick contact deactivates once and adds 10
+  ---
+  duration_ms: 1.609339
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:135:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 0,
+          vy: 200,
+          x: 85,
+    +     y: 65
+    -     y: 45
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 45
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 65
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:137:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T13 inactive brick does not collide or award points
+not ok 13 - BRICK-T13 inactive brick does not collide or award points
+  ---
+  duration_ms: 0.759091
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:141:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 0,
+          vy: 200,
+          x: 85,
+    +     y: 65
+    -     y: 45
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 45
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 65
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:142:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T14 high-speed swept collision prevents tunneling
+not ok 14 - BRICK-T14 high-speed swept collision prevents tunneling
+  ---
+  duration_ms: 0.491455
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:145:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 0,
+          vy: 2000,
+          x: 85,
+    +     y: 230
+    -     y: 30
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 30
+      radius: 8
+      vx: 0
+      vy: 2000
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 230
+      radius: 8
+      vx: 0
+      vy: 2000
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:147:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T15 bottom exit subtracts one life and resets only ball
+not ok 15 - BRICK-T15 bottom exit subtracts one life and resets only ball
+  ---
+  duration_ms: 0.739623
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:152:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 0,
+          vy: 200,
+          x: 400,
+    +     y: 509
+    -     y: 507
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 210
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 507
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 50
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 210
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 509
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 50
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:154:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T16 third life loss freezes at exit position and marks lost
+not ok 16 - BRICK-T16 third life loss freezes at exit position and marks lost
+  ---
+  duration_ms: 0.758524
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:159:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 0,
+          vy: 200,
+          x: 400,
+    +     y: 509
+    -     y: 507
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 507
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 1
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 509
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 1
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:160:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T17 final active brick wins immediately, score 240
+not ok 17 - BRICK-T17 final active brick wins immediately, score 240
+  ---
+  duration_ms: 1.246754
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:165:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 0,
+          vy: 200,
+          x: 85,
+    +     y: 65
+    -     y: 45
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 45
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: false
+    score: 230
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 85
+      y: 65
+      radius: 8
+      vx: 0
+      vy: 200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: false
+    score: 230
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:166:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T18 pause toggle stops entire update
+not ok 18 - BRICK-T18 pause toggle stops entire update
+  ---
+  duration_ms: 0.911966
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:170:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 360,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 360
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:171:34)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T19 resume toggle stops entire update
+not ok 19 - BRICK-T19 resume toggle stops entire update
+  ---
+  duration_ms: 1.244367
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:176:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 340,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'paused'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'paused'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'paused'
+    paddle:
+      x: 340
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:178:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T20 paused and terminal states freeze; terminal toggle ignored
+not ok 20 - BRICK-T20 paused and terminal states freeze; terminal toggle ignored
+  ---
+  duration_ms: 1.639184
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:182:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 340,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'paused'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'paused'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'paused'
+    paddle:
+      x: 340
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:185:13)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T21 resetGame restores initial values with independent object graphs
+ok 21 - BRICK-T21 resetGame restores initial values with independent object graphs
+  ---
+  duration_ms: 0.716154
+  type: 'test'
+  ...
+# Subtest: BRICK-T22 same state and input sequence is deterministic
+not ok 22 - BRICK-T22 same state and input sequence is deterministic
+  ---
+  duration_ms: 1.633784
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:196:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 414.4,
+    +     y: 422
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 360,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 360
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 414.4
+      y: 422
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    simulate (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:199:83)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:200:26)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T23 frozen input graph is not mutated and result is fresh
+not ok 23 - BRICK-T23 frozen input graph is not mutated and result is fresh
+  ---
+  duration_ms: 0.368414
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:202:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot assign to read only property 'x' of object '#<Object>'"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    updateGame (file:///mnt/data/Brick_Breaker_Independent_Harness/validation-only/broken/gameLogic.js:12:13)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:204:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T24 dt rejects invalid values and accepts inclusive endpoints
+not ok 24 - BRICK-T24 dt rejects invalid values and accepts inclusive endpoints
+  ---
+  duration_ms: 0.598915
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:209:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception (RangeError): dt -0.001'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:211:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T25 simultaneous left and right cancel
+not ok 25 - BRICK-T25 simultaneous left and right cancel
+  ---
+  duration_ms: 0.594201
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:217:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    +     x: 416,
+    +     y: 420
+    -     x: 400,
+    -     y: 440
+        },
+        bricks: [
+          {
+            active: true,
+            height: 20,
+    ...
+          width: 100,
+    +     x: 360,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 360
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 416
+      y: 420
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:218:8)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T26 dt=0 freezes gameplay even at contact; toggle may change status
+not ok 26 - BRICK-T26 dt=0 freezes gameplay even at contact; toggle may change status
+  ---
+  duration_ms: 1.307593
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:220:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        ball: {
+          radius: 8,
+          vx: 160,
+          vy: -200,
+    ...
+          width: 100,
+    +     x: 360,
+    -     x: 350,
+          y: 460
+        },
+        score: 0,
+        status: 'playing'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 360
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 440
+      radius: 8
+      vx: 160
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: true
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: true
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: true
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:221:40)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T27 exact bottom threshold is strict; beyond exits immediately
+not ok 27 - BRICK-T27 exact bottom threshold is strict; beyond exits immediately
+  ---
+  duration_ms: 0.442181
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:230:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected "actual" not to be reference-equal to "expected":
+    
+    {
+      ball: {
+        radius: 8,
+        vx: 0,
+        vy: 0,
+        x: 400,
+        y: 508
+      },
+      bricks: [
+        {
+          active: false,
+          height: 20,
+          id: 'r0c0',
+          width: 80,
+          x: 45,
+          y: 60
+        },
+        {
+          active: false,
+          height: 20,
+          id: 'r0c1',
+          width: 80,
+          x: 135,
+          y: 60
+        },
+        {
+          active: false,
+          height: 20,
+          id: 'r0c2',
+          width: 80,
+          x: 225,
+          y: 60
+        },
+        {
+          active: false,
+          height: 20,
+          id: 'r0c3',
+          width: 80,
+          x: 315,
+          y: 60
+        },
+        {
+          active: false,
+          height: 20,
+          id: 'r0c4',
+          width: 80,
+    ...
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 508
+      radius: 8
+      vx: 0
+      vy: 0
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 400
+      y: 508
+      radius: 8
+      vx: 0
+      vy: 0
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'notStrictEqual'
+  stack: |-
+    noSharedRequiredObjects (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:32:10)
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:71:3)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:232:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: BRICK-T28 simultaneous wall axes and adjacent-brick corner impacts
+not ok 28 - BRICK-T28 simultaneous wall axes and adjacent-brick corner impacts
+  ---
+  duration_ms: 0.993305
+  type: 'test'
+  location: '/mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:237:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    updateGame mutated supplied input state
+    + actual - expected
+    
+      {
+        ball: {
+          radius: 8,
+          vx: -200,
+          vy: -200,
+    +     x: 0,
+    +     y: 0
+    -     x: 10,
+    -     y: 10
+        },
+        bricks: [
+          {
+            active: false,
+            height: 20,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 10
+      y: 10
+      radius: 8
+      vx: -200
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  actual:
+    status: 'playing'
+    paddle:
+      x: 350
+      y: 460
+      width: 100
+      height: 12
+      speed: 400
+    ball:
+      x: 0
+      y: 0
+      radius: 8
+      vx: -200
+      vy: -200
+    bricks:
+      0:
+        id: 'r0c0'
+        x: 45
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      1:
+        id: 'r0c1'
+        x: 135
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      2:
+        id: 'r0c2'
+        x: 225
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      3:
+        id: 'r0c3'
+        x: 315
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      4:
+        id: 'r0c4'
+        x: 405
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      5:
+        id: 'r0c5'
+        x: 495
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      6:
+        id: 'r0c6'
+        x: 585
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      7:
+        id: 'r0c7'
+        x: 675
+        y: 60
+        width: 80
+        height: 20
+        active: false
+      8:
+        id: 'r1c0'
+        x: 45
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      9:
+        id: 'r1c1'
+        x: 135
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      10:
+        id: 'r1c2'
+        x: 225
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      11:
+        id: 'r1c3'
+        x: 315
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      12:
+        id: 'r1c4'
+        x: 405
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      13:
+        id: 'r1c5'
+        x: 495
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      14:
+        id: 'r1c6'
+        x: 585
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      15:
+        id: 'r1c7'
+        x: 675
+        y: 90
+        width: 80
+        height: 20
+        active: false
+      16:
+        id: 'r2c0'
+        x: 45
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      17:
+        id: 'r2c1'
+        x: 135
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      18:
+        id: 'r2c2'
+        x: 225
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      19:
+        id: 'r2c3'
+        x: 315
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      20:
+        id: 'r2c4'
+        x: 405
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      21:
+        id: 'r2c5'
+        x: 495
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      22:
+        id: 'r2c6'
+        x: 585
+        y: 120
+        width: 80
+        height: 20
+        active: false
+      23:
+        id: 'r2c7'
+        x: 675
+        y: 120
+        width: 80
+        height: 20
+        active: true
+    score: 0
+    lives: 3
+  operator: 'deepStrictEqual'
+  stack: |-
+    run (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:70:10)
+    TestContext.<anonymous> (file:///mnt/data/Brick_Breaker_Independent_Harness/tests/brick.test.mjs:239:14)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 3
+# fail 25
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 153.276157
